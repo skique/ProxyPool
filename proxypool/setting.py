@@ -46,7 +46,7 @@ PROXY_SCORE_MIN = 0
 PROXY_SCORE_INIT = 10
 
 # definition of proxy number
-PROXY_NUMBER_MAX = 50000
+PROXY_NUMBER_MAX = 100
 PROXY_NUMBER_MIN = 0
 
 # definition of tester cycle, it will test every CYCLE_TESTER second
@@ -55,8 +55,11 @@ CYCLE_TESTER = env.int('CYCLE_TESTER', 20)
 CYCLE_GETTER = env.int('CYCLE_GETTER', 100)
 GET_TIMEOUT = env.int('GET_TIMEOUT', 10)
 
+# 生成代理的api链接
+GENERATE_PROXY_API = 'http://http.tiqu.letecs.com/getip3?num=10&type=2&pro=&city=0&yys=0&port=1&time=1&ts=1&ys=1&cs=1&lb=1&sb=0&pb=4&mr=2&regions='
+
 # definition of tester
-TEST_URL = env.str('TEST_URL', 'http://www.baidu.com')
+TEST_URL = env.str('TEST_URL', 'https://www.baidu.com/')
 TEST_TIMEOUT = env.int('TEST_TIMEOUT', 10)
 TEST_BATCH = env.int('TEST_BATCH', 20)
 # only save anonymous proxy
